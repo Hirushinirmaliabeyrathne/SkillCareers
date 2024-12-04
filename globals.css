@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import url('https://unpkg.com/leaflet@1.7.1/dist/leaflet.css');
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  font-family: 'Montserrat'; 
+}
+
+/* Styling for Swiper navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #001571 !important; /* Dark blue color */
+  width: 35px;
+  height: 35px;
+  opacity: 0.8;
+}
+
+.swiper-button-prev {
+  left: -45px; /* Position slightly outside the slide */
+}
+
+.swiper-button-next {
+  right: -45px; /* Position slightly outside the slide */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #001571; /* Brighter blue on hover */
+  opacity: 1;
+}
+
+
+
+
+/* Keyframes for sliding animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animation classes */
+.animate-left {
+  opacity: 1;
+  animation: slideInFromLeft 1s ease forwards;
+}
+
+.animate-right {
+  opacity: 1;
+  animation: slideInFromRight 1s ease forwards;
+}
+
+.animate-bottom {
+  opacity: 1;
+  animation: slideInFromBottom 1s ease forwards;
+}
+
+
+/* Container animation */
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-100 {
+  opacity: 1;
+}
+
+/* Optional fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+/* Global styles for responsive design */
+@media (max-width: 640px) {
+  h1, h2 {
+    font-size: 1.25rem; /* Adjust headline sizes */
+  }
+
+  .text-sm {
+    font-size: 0.75rem; /* Smaller text for smaller screens */
+  }
+
+  .text-base {
+    font-size: 0.875rem; /* Default text size */
+  }
+
+  .text-lg {
+    font-size: 1rem; /* Large text */
+  }
+
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Align items and reduce gap for mid-sized screens */
+  .gap-8 {
+    gap: 1rem;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  /* Navbar spacing and alignment for mobile */
+  .space-x-3 {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+  }
+
+  /* Adjust font sizes for smaller screens */
+  .text-sm {
+      font-size: 0.875rem; /* For smaller screens */
+  }
+
+  .text-base {
+      font-size: 1rem; /* Standard base text */
+  }
+
+  .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+
+  .py-3 {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-base {
+      font-size: 1rem; /* Default size for tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-base {
+      font-size: 1.125rem; /* Larger size for desktops */
+  }
+}
+
+/* 
+
+@screen sm {
+  .text-sm {
+    font-size: 0.875rem; 
+  }
+}
+
+@screen md {
+  .h-60 {
+    height: 15rem; 
+  }
+}
+@screen lg {
+  .h-60vh {
+    height: 70vh;
+  }
+}
+
+ */
+
+
+
+ 
